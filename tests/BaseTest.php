@@ -9,8 +9,8 @@
 namespace Dezsidog\AliyunSDK\Core\Test;
 
 
+use Dezsidog\AliyunSDK\Core\ClientFactory;
 use Dezsidog\AliyunSDK\Core\DefaultAcsClient;
-use Dezsidog\AliyunSDK\Core\Profile\DefaultProfile;
 
 class BaseTest extends BaseTestCase
 {
@@ -18,17 +18,7 @@ class BaseTest extends BaseTestCase
     {
         global $config;
 
-        $profile = DefaultProfile::getProfile($config['region'], $config['accessKeyId'], $config['accessKeySecret']);
-
-        if (!empty($config['services'])) {
-            foreach ($config['services'] as $service) {
-                DefaultProfile::addEndpoint($service['end_point_name'], $config['region'], $service['product_name'], $service['domain']);
-            }
-        }
-
-        $this->assertInstanceOf(DefaultProfile::class, $profile);
-
-        $client = new DefaultAcsClient($profile);
+        $client = ClientFactory::getClient($config);
 
         $this->assertInstanceOf(DefaultAcsClient::class, $client);
     }
