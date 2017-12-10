@@ -10,5 +10,12 @@ require_once 'vendor/autoload.php';
 $config = [
     'accessKeyId' => 'LTAIyT3sZMJlmmO2',
     'accessKeySecret' => 'PL1fxflloHFmo23sWxs63hzMn16D5M',
-    'region' => 'cn-hangzhou'
+    'region' => 'cn-hangzhou',
+    'services' => [
+        [
+            'product_name' => 'Dysmsapi',
+            'domain' => 'dysmsapi.aliyuncs.com',
+            'end_point_name' => 'cn-hangzhou',
+        ],
+    ],
 ];
