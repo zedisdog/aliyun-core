@@ -8,8 +8,8 @@
 require_once 'vendor/autoload.php';
 
 $config = [
-    'accessKeyId' => 'LTAIyT3sZMJlmmO2',
-    'accessKeySecret' => 'PL1fxflloHFmo23sWxs63hzMn16D5M',
+    'accessKeyId' => 'access key',
+    'accessKeySecret' => 'access secret',
     'region' => 'cn-hangzhou',
     'services' => [
         [
