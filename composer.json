@@ -1,0 +1,22 @@
+{
+    "name": "dezsidog/aliyun-core",
+    "authors": [
+        {
+            "name": "Aliyuncs",
+            "homepage": "https://www.aliyun.com"
+        }
+    ],
+    "license": "Apache-2.0",
+    "require": {
+        "php": "~7.1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dezsidog\\AliyunSDK\\Core\\": "src/",
+            "Dezsidog\\AliyunSDK\\Core\\Test\\": "tests/"
+        }
+    }
+}
