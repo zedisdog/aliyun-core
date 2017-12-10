@@ -19,7 +19,7 @@ class ClientFactory
     public static function getClient(array $config)
     {
         if (!self::$client) {
-            $profile = DefaultProfile::getProfile($config['region'], $config['accessKeyId'], $config['accessKeySecret']);
+            $profile = DefaultProfile::getProfile($config['region'], $config['access_key_id'], $config['access_key_secret']);
 
             if (!empty($config['services'])) {
                 foreach ($config['services'] as $service) {
